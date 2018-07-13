@@ -11,20 +11,17 @@ endpoints:
     sensitive: false
   health: 
     sensitive: false
-petclinic:
-  database: hsqldb
+
 
 spring:
   application:
     admin:
       enabled: false
-  datasource:
-    schema: classpath*:db/${petclinic.database}/schema.sql
-    data:  classpath*:db/${petclinic.database}/data.sql
+  
 logging:
   level:
     org:
-      springframework: INFO
+      springframework: trace
 security:
   basic:
     enabled: false
